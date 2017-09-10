@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <phpunit bootstrap="./vendor/autoload.php">
+  <filter>
+    <whitelist>
+      <directory>./src</directory>
+    </whitelist>
+  </filter>
 
-    <testsuites>
-        <testsuite name="My Project - TestSuite">
-            <directory>./tests</directory>
-        </testsuite>
-    </testsuites>
+  <testsuites>
+    <testsuite name="My Project - TestSuite">
+      <directory>./tests</directory>
+    </testsuite>
+  </testsuites>
+  <logging>
+    <log type="coverage-clover" target="build/logs/clover.xml"/>
+  </logging>
 
 </phpunit>
